@@ -65,11 +65,11 @@ def main() -> None:
         '__database': f"{SpiderFootHelpers.dataPath()}/spiderfoot.db",
         '__modules__': None,  # List of modules. Will be set after start-up.
         '__correlationrules__': None,  # List of correlation rules. Will be set after start-up.
-        '_socks1type': '',
-        '_socks2addr': '',
-        '_socks3port': '',
-        '_socks4user': '',
-        '_socks5pwd': '',
+        '_socks1type': '5',  # SOCKS version, '5' for SOCKS5 (Tor uses SOCKS5)
+        '_socks2addr': '127.0.0.1',  # Tor is running on localhost
+        '_socks3port': '9050',  # Default Tor port for SOCKS proxy
+        '_socks4user': '',  # Leave empty unless authentication is required
+        '_socks5pwd': '',  # Leave empty unless authentication is required
     }
 
     sfOptdescs = {
